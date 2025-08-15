@@ -35,7 +35,7 @@ sudo -u postgres psql -c "CREATE DATABASE postchain WITH TEMPLATE = template0 LC
   -c "GRANT ALL PRIVILEGES ON DATABASE postchain TO postchain;"
 ```
 
-3) Grant schema privileges (so the app can create tables and run migrations):
+3) Grant all schema privileges (so the app can create tables and run migrations):
 ```bash
 sudo -u postgres psql -d postchain -c "GRANT ALL PRIVILEGES ON SCHEMA public TO postchain;"
 sudo -u postgres psql -d postchain -c "GRANT CREATE ON SCHEMA public TO postchain;"
@@ -62,7 +62,7 @@ psql postgres -c "CREATE DATABASE postchain WITH TEMPLATE = template0 LC_COLLATE
   -c "GRANT ALL PRIVILEGES ON DATABASE postchain TO postchain;"
 ```
 
-3) Grant schema privileges:
+3) Grant all schema privileges:
 ```bash
 psql -d postchain -c "GRANT ALL PRIVILEGES ON SCHEMA public TO postchain;"
 psql -d postchain -c "GRANT CREATE ON SCHEMA public TO postchain;"
